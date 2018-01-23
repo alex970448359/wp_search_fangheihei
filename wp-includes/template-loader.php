@@ -63,6 +63,10 @@ if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
 	else :
 		$template = get_index_template();
 	endif;
+
+	error_log("HHHHHHHHHHHHHHHHH");
+	error_log($template);  //colormag/front-page.php
+	
 	/**
 	 * Filters the path of the current template before including it.
 	 *

@@ -213,6 +213,10 @@ function get_search_form( $echo = true ) {
 	$format = apply_filters( 'search_form_format', $format );
 
 	$search_form_template = locate_template( 'searchform.php' );
+
+    error_log("HHHHHHHHHHHHHHHHH");
+	error_log($search_form_template); //searchform.php
+
 	if ( '' != $search_form_template ) {
 		ob_start();
 		require( $search_form_template );

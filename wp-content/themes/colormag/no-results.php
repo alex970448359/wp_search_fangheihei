@@ -19,7 +19,7 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'colormag' ); ?></p>
+			<p><?php _e( '对不起，没有找到该房源.', 'colormag' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
