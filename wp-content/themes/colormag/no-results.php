@@ -24,7 +24,7 @@
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'colormag' ); ?></p>
+			<p><?php _e( '对不起，没有找到该页面.', 'colormag' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

@@ -9,25 +9,41 @@
 ?>
 <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
     <div class="form-group row">    
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="prov">
+        </div>
         <label for="formGroupExampleInput">省</label>
-
+ 
+        <div class="col">    
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="city">
+        </div>
         <label for="formGroupExampleInput">市</label>
 
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="dist">
+        </div>
         <label for="formGroupExampleInput">区</label>
+    </div>
 
+    <div class="form-group row"> 
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="comm">
+        </div>
         <label for="formGroupExampleInput">小区</label>
 
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="build">
+        </div>
         <label for="formGroupExampleInput">号楼</label>
 
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="unit">
+        </div>
         <label for="formGroupExampleInput">单元</label>
-
+ 
+        <div class="col">
         <input type="text" placeholder="<?php esc_attr_e( '', 'colormag' ); ?>" class="form-control" name="s">
+        </div>
         <label for="formGroupExampleInput">室</label>
     </div>
     <button class="btn btn-success" type="submit">搜索</button>
