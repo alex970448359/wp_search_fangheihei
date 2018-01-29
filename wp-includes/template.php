@@ -444,6 +444,21 @@ function get_search_template() {
 }
 
 /**
+ * Retrieve path of init search template in current or parent template.
+ *
+ * The template hierarchy is filterable via the {@see 'search_template_hierarchy'} hook.
+ * The template path is filterable via the {@see 'search_template'} hook.
+ *
+ * @since 1.5.0
+ *
+ * @see get_query_template()
+ *
+ * @return string Full path to search template file.
+ */
+function get_init_search_template() {
+	return get_query_template('initsearch');
+}
+/**
  * Retrieve path of single template in current or parent template. Applies to single Posts,
  * single Attachments, and single custom post types.
  *

@@ -328,6 +328,15 @@ class WP_Query {
 	public $is_search = false;
 
 	/**
+	 * Set if query was init search.
+	 *
+	 * @since 1.5.0
+	 * @access public
+	 * @var bool
+	 */
+	public $is_init_search = false;
+
+	/**
 	 * Set if query is feed display.
 	 *
 	 * @since 1.5.0
@@ -509,6 +518,7 @@ class WP_Query {
 		$this->is_tag = false;
 		$this->is_tax = false;
 		$this->is_search = false;
+		$this->is_init_search = false;
 		$this->is_feed = false;
 		$this->is_comment_feed = false;
 		$this->is_trackback = false;
@@ -819,6 +829,10 @@ class WP_Query {
 
 			if ( isset( $this->query['s'] ) ) {
 				$this->is_search = true;
+			}
+
+			if ( isset( $this->query['initsearch'] ) ) {
+				$this->is_init_search = true;
 			}
 
 			if ( '' !== $qv['second'] ) {
@@ -3811,6 +3825,16 @@ class WP_Query {
 	 */
 	public function is_search() {
 		return (bool) $this->is_search;
+	}
+	/**
+	 * Is the query for init search?
+	 *
+	 * @since 3.1.0
+	 *
+	 * @return bool
+	 */
+	public function is_init_search() {
+		return (bool) $this->is_init_search;
 	}
 
 	/**

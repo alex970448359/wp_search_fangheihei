@@ -568,6 +568,26 @@ function is_search() {
 }
 
 /**
+ * Is the query for init search?
+ *
+ * @since 1.5.0
+ *
+ * @global WP_Query $wp_query Global WP_Query instance.
+ *
+ * @return bool
+ */
+function is_init_search() {
+	global $wp_query;
+
+	if ( ! isset( $wp_query ) ) {
+		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+		return false;
+	}
+
+	return $wp_query->is_init_search();
+}
+
+/**
  * Is the query for an existing single post?
  *
  * Works for any post type, except attachments and pages

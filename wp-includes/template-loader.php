@@ -46,6 +46,7 @@ if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
 	if     ( is_embed()          && $template = get_embed_template()          ) :
 	elseif ( is_404()            && $template = get_404_template()            ) :
 	elseif ( is_search()         && $template = get_search_template()         ) :
+	elseif ( is_init_search()    && $template = get_init_search_template()    ) :
 	elseif ( is_front_page()     && $template = get_front_page_template()     ) :
 	elseif ( is_home()           && $template = get_home_template()           ) :
 	elseif ( is_post_type_archive() && $template = get_post_type_archive_template() ) :
